@@ -5,8 +5,6 @@
 
 .loader .loader_wheel{
     position: absolute;
-    top: 0;
-    left: 0;
 
     border-style: solid;
     border-radius: 50%;
