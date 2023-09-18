@@ -1,0 +1,7 @@
+:root{
+    --block-size: clamp(1rem, 3svh, 2svw);
+    --first-color: #151515;
+    --second-color: #ff6600;
+    --third-color: #252525;
+    --fourth-color: #1a1a1a;
+}

@@ -1,0 +1,50 @@
+.loader{
+    aspect-ratio: 1 / 1;
+    height: calc(var(--block-size) * 2);
+}
+
+.loader .loader_wheel{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 3px;
+    aspect-ratio: inherit;
+    height: inherit;
+}
+
+.loader .wheel_basic{
+    opacity: 0.3;
+    border-color: var(--second-color);
+}
+
+.loader .wheel_segment{
+    border-color: transparent;
+    border-top-color: var(--second-color);
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.loader .wheel_segment.segment1{
+    opacity: 1;
+    animation-delay: 0s;
+}
+
+.loader .wheel_segment.segment2{
+    opacity: 0.6;
+    animation-delay: 0.1s;
+}
+
+.loader .wheel_segment.segment3{
+    opacity: 0.4;
+    animation-delay: 0.2s;
+}
+
+@keyframes spin{
+    0%, 5% {transform: rotate(0);}
+    95%, 100% {transform: rotate(1turn);}
+}
