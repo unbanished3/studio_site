@@ -1,0 +1,40 @@
+.Header{
+    background-color: var(--first-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: calc(var(--block-size)) var(--block-size);
+}
+
+.Header .nav{
+    display: flex;
+    flex-direction: row;
+    gap: var(--block-size);
+}
+
+.Header .nav a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.Header .nav a::after{
+    position: relative;
+    top: 30%;
+    display: block;
+    content: "";
+    width: inherit;
+    height: 1px;
+    background-color: var(--second-color);
+    box-shadow: 0 0 4px var(--second-color);
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+}
+
+.Header .nav a:hover::after{
+    transform: scaleX(100%);
+}
+
+.Header .nav a.active::after{
+    transform: scaleX(100%);
+}
